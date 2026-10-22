@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- bozza in anteprima: da togliere quando si pubblica sull'hosting definitivo -->
+<meta name="robots" content="noindex, nofollow">
+<title>Codice Iknosys 2026</title>
+<meta name="description" content="Codice Iknosys, l'unico evento di formazione per ristoratori in Sardegna. 17 novembre 2026, Fiera di Cagliari.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<!--
+  BOZZA v2 della landing Codice Iknosys 2026, copy da codiceiknosys.com.
+  I blocchi gialli tratteggiati "SEGNAPOSTO" indicano contenuti senza omologo nella landing attuale.
+  Le foto sono collegate a codiceiknosys.com/foto/: in produzione vanno copiate nel nuovo sito.
+  Raggi: pulsanti 10px, card 18px, pill/badge 999px.
+-->
+<style>
+:root{
+  --ink:#0b1226; --ink-2:#141c36; --bg:#f5f6fb; --surface:#ffffff; --tint:#eceffb;
+  --text:#0b1226; --muted:#4a5370; --line:#dde1ef;
+  --accent:#2347e8; --accent-2:#1a37c4; --on-accent:#ffffff;
+  --sun:#ffcc3d; --on-dark:#f2f4fb; --on-dark-muted:#a9b0c9;
+  --r-btn:10px; --r-card:18px;
+  --wrap:1240px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Geist",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:var(--body);background:var(--bg);color:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(34px,4.6vw,60px);font-weight:800}
+h3{font-size:22px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+p{max-width:65ch}
+.lead{font-size:19px;color:var(--muted)}
+.hl{background:var(--sun);color:var(--ink);padding:0 .18em;border-radius:12px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.blue{color:var(--accent)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+section{padding:110px 0}
+
+/* pulsanti */
+.btn{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;font-family:var(--body);font-weight:600;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:var(--r-btn);background:var(--accent);color:var(--on-accent);border:0;cursor:pointer;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s}
+.btn:hover{background:var(--accent-2);transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn.ghost{background:transparent;color:var(--on-dark);box-shadow:inset 0 0 0 1.5px rgba(242,244,251,.35)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.sun:hover{background:#ffd866}
+.btn i{font-size:18px}
+
+/* segnaposto */
+.seg{border:2px dashed #d9a400;background:#fff6d6;color:#5a4300;border-radius:12px;padding:14px 16px;font-size:14.5px;line-height:1.5}
+.seg b{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;color:#8a6500}
+.dark .seg{background:#2b2610;color:#ffe9a3;border-color:#a88300}
+.dark .seg b{color:#ffd24d}
+
+/* barra countdown + nav */
+.topbar{background:var(--accent);color:var(--on-accent);font-size:15px;font-weight:600}
+.topbar .wrap{display:flex;align-items:center;justify-content:center;gap:16px;padding:9px 24px;flex-wrap:wrap}
+.cd{display:flex;gap:6px}
+.cd span{background:var(--surface);color:var(--ink);border-radius:8px;padding:2px 9px;font-variant-numeric:tabular-nums;min-width:44px;text-align:center}
+.cd small{font-size:11px;color:var(--muted);margin-left:2px}
+header.nav{position:sticky;top:0;z-index:40;background:rgba(11,18,38,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+/* logo ufficiale (bianco su trasparente) */
+.logo{display:inline-flex;align-items:center;text-decoration:none}
+.logo img{height:40px;width:auto;max-width:none;flex-shrink:0;display:block}
+footer .logo img{height:48px}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{color:var(--on-dark-muted);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+nav a:hover{color:var(--on-dark)}
+.nav .btn{padding:11px 18px;font-size:15px}
+.burger{display:none;background:none;border:0;color:var(--on-dark);font-size:28px;cursor:pointer}
+
+/* hero */
+/* hero a tutta larghezza con immagine di sfondo */
+.hero{background:var(--ink);color:var(--on-dark);position:relative;overflow:hidden;min-height:calc(100dvh - 110px);display:grid;align-items:center;padding:80px 0 96px;text-align:center}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;filter:saturate(.85) contrast(1.05) brightness(.6)}
+.hero-bg::before{content:"";position:absolute;inset:0;background:rgba(35,71,232,.28);mix-blend-mode:multiply}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(11,18,38,.55) 0%,rgba(11,18,38,.35) 40%,rgba(11,18,38,.9) 100%),radial-gradient(85% 75% at 50% 45%,rgba(11,18,38,0) 40%,rgba(11,18,38,.65) 100%)}
+.hero .wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.22);background:rgba(11,18,38,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:7px 8px 7px 16px;font-size:14.5px;font-weight:500;color:var(--on-dark)}
+.pill a{background:var(--accent);color:#fff;border-radius:999px;padding:5px 14px;text-decoration:none;font-weight:600}
+.hero h1{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 80;font-size:clamp(54px,9vw,140px);font-weight:800;letter-spacing:.01em;line-height:.9;margin:30px 0 18px;text-transform:uppercase;text-shadow:0 6px 40px rgba(5,9,22,.45)}
+.hero .payoff{font-family:"Archivo",system-ui,sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;color:var(--sun);font-size:clamp(16px,1.7vw,24px);line-height:1.2;letter-spacing:.02em;max-width:none}
+.hero .claim{font-family:"Archivo",system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;color:var(--sun);font-size:clamp(22px,2.6vw,38px);line-height:1.12;letter-spacing:0;margin-top:18px;max-width:34ch;padding-bottom:4px}
+.hero .claim b{color:var(--on-dark);font-weight:900}
+.hero .ctas{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;justify-content:center}
+
+/* esperienza */
+.exp{background:var(--surface)}
+.exp .intro-head{text-align:center;max-width:900px;margin:0 auto 72px}
+.exp .intro-head h2{max-width:none}
+.exp .intro-head p{margin:24px auto 0;font-size:19px;color:var(--muted)}
+.exp h3.why{font-size:clamp(26px,2.8vw,38px);font-weight:800;max-width:24ch}
+.premise{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.8vw,36px);line-height:1.2;letter-spacing:-.01em;max-width:30ch;margin-top:40px;padding-left:22px;border-left:4px solid var(--sun)}
+.questions{display:grid;gap:14px;margin:28px 0 28px}
+.q{display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:center;background:var(--bg);border-radius:var(--r-card);padding:20px 24px}
+.q i{font-size:30px;color:var(--accent)}
+.q h3{font-size:clamp(20px,2.2vw,26px)}
+.exp .after{font-size:18px;color:var(--muted);max-width:68ch}
+.exp .answer{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.01em;max-width:40ch;margin:22px 0 64px}
+.pillars{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:18px}
+.pillar{border-radius:var(--r-card);overflow:hidden;position:relative;background:var(--tint);display:flex;flex-direction:column}
+.pillar.big{grid-row:span 2;background:var(--ink);color:var(--on-dark);justify-content:flex-end}
+.pillar.big img{height:340px;object-fit:cover;width:100%}
+.pillar .body{padding:26px 28px 30px}
+.pillar .k{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+.pillar.big .k{color:var(--sun)}
+.pillar h3{margin:8px 0 10px;font-size:26px}
+.pillar p{color:var(--muted);font-size:16px}
+.pillar.big p{color:var(--on-dark-muted)}
+.pillar.side{flex-direction:row}
+.pillar.side img{width:42%;object-fit:cover}
+.closing{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:56px;padding-top:40px;border-top:1px solid var(--line)}
+.closing p{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);font-weight:700;line-height:1.25;letter-spacing:-.01em;max-width:34ch}
+
+/* credibilità */
+.cred{background:var(--bg);text-align:center;overflow:hidden}
+.cred h2{max-width:22ch;margin:0 auto}
+.cred .lead{margin:24px auto 0}
+.cred .lead+.lead{margin-top:12px}
+/* trailer edizione 2025 */
+.trailer{max-width:980px;margin:56px auto 0;aspect-ratio:16/9;border-radius:var(--r-card);overflow:hidden;position:relative;background:var(--ink);box-shadow:0 30px 80px rgba(11,18,38,.25)}
+.trailer video{width:100%;height:100%;object-fit:cover;display:block}
+.trailer .play{position:absolute;inset:0;display:grid;place-items:center;border:0;cursor:pointer;background:linear-gradient(rgba(11,18,38,.15),rgba(11,18,38,.45));color:#fff;font-family:inherit}
+.trailer .play span{display:inline-flex;align-items:center;gap:12px;background:var(--accent);border-radius:999px;padding:14px 26px 14px 18px;font-weight:600;font-size:17px;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.trailer .play span i{font-size:26px}
+.trailer .play:hover span{transform:scale(1.05)}
+.trailer.playing .play{display:none}
+.marquee{margin-top:56px;display:flex;gap:16px;width:max-content;animation:scroll 60s linear infinite}
+.marquee img{height:220px;width:330px;object-fit:cover;border-radius:14px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* per chi è */
+.forwho{background:var(--surface)}
+.forwho .head{text-align:center;max-width:820px;margin:0 auto 56px}
+.forwho .head p{margin:22px auto 0}
+.forwho .kicker{font-family:var(--display);font-weight:700;font-size:22px;color:var(--accent);margin-bottom:14px}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.who{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.who i{font-size:38px;color:var(--accent)}
+.who h3{margin:18px 0 10px}
+.who p{color:var(--muted);font-size:16px}
+.who p.seg{font-size:15.5px;color:#5a4300;max-width:none}
+.forwho .note{text-align:center;margin:48px auto 0;font-size:19px;font-weight:500}
+
+/* problema (fascia scura) */
+.dark{background:var(--ink);color:var(--on-dark)}
+.problem h2{max-width:20ch}
+.problem .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:56px 0}
+.stat{border-top:2px solid var(--sun);padding-top:20px}
+.stat strong{font-family:var(--display);font-size:clamp(46px,5vw,72px);font-weight:800;letter-spacing:-.03em;line-height:1;display:block}
+.stat span{color:var(--on-dark-muted);display:block;margin-top:10px;max-width:28ch}
+.problem p{color:var(--on-dark-muted);font-size:18px}
+.problem p.good{color:var(--on-dark);font-family:var(--display);font-weight:700;font-size:clamp(22px,2.4vw,30px);line-height:1.25;margin-top:22px;max-width:36ch}
+.seg-quote{margin-top:56px;max-width:720px}
+
+/* numeri + benefici */
+.benefits{background:var(--tint)}
+.benefits .top{text-align:center}
+.benefits .top .eyebrow{margin-bottom:12px}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:56px 0 40px}
+.num{background:var(--surface);border-radius:var(--r-card);padding:28px 24px}
+.num strong{font-family:var(--display);font-weight:800;font-size:clamp(48px,5vw,68px);color:var(--accent);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.num span{display:block;font-weight:700;margin:10px 0 4px}
+.num p{font-size:15px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:980px;margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border-radius:999px;padding:10px 18px;font-weight:500;font-size:15.5px}
+.chip i{color:var(--accent);font-size:18px}
+.chip.seg{border-radius:999px;padding:8px 16px;font-size:14px}
+
+/* speaker */
+.speakers{background:var(--surface)}
+.speakers .head{max-width:760px;margin-bottom:52px}
+.spk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.spk{display:flex;flex-direction:column}
+.spk .photo{aspect-ratio:3/4;border-radius:var(--r-card);overflow:hidden;background:var(--tint)}
+.spk .photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.spk:hover .photo img{transform:scale(1.04)}
+.spk .role{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:18px 0 6px}
+.spk h3{font-size:24px;margin-bottom:12px}
+.spk .seg{font-size:13.5px}
+
+/* testimonianze */
+.testi{background:var(--bg)}
+.testi .head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:44px}
+.vids{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.vid{position:relative;aspect-ratio:9/14;border-radius:var(--r-card);overflow:hidden;border:0;cursor:pointer;background:var(--ink);text-align:left;font-family:inherit;color:#fff}
+.vid img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.vid:hover img{transform:scale(1.05)}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,18,38,.92),transparent 55%)}
+.vid .meta{position:absolute;left:16px;right:16px;bottom:16px;z-index:1}
+.vid .meta b{display:block;font-size:17px}
+.vid .meta small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted)}
+.vid .play{position:absolute;top:14px;left:14px;z-index:1;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.92);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font-size:13px;font-weight:600}
+.vid .play i{font-size:16px;color:var(--accent)}
+.testi .seg{margin-top:28px;max-width:720px}
+.spk .claim{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.3;margin-bottom:10px}
+.spk .bio{font-size:15px;color:var(--muted);line-height:1.55}
+.track p{color:var(--muted);font-size:16px}
+
+/* temi */
+.tracks{background:var(--surface)}
+.tracks .layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.tracks .intro{position:sticky;top:130px}
+.tracks .intro p{margin:20px 0 30px;color:var(--muted)}
+.track{display:grid;grid-template-columns:72px 1fr;gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}
+.track:first-child{padding-top:0}
+.track .n{font-family:var(--display);font-weight:800;font-size:40px;color:var(--accent);line-height:1}
+.track h3{font-size:26px;margin-bottom:6px}
+.track .who-s{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:12px}
+
+/* programma */
+.program{background:var(--bg)}
+.program .head{text-align:center;max-width:760px;margin:0 auto 48px}
+.program .head p{margin:18px auto 0;color:var(--muted)}
+.days{display:grid;gap:14px;max-width:980px;margin:0 auto}
+details.day{background:var(--surface);border-radius:var(--r-card);overflow:hidden}
+details.day summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:96px 1fr auto;gap:22px;align-items:center;padding:22px 26px}
+details.day summary::-webkit-details-marker{display:none}
+.day .date{font-family:var(--display);font-weight:800;font-size:54px;line-height:1;color:var(--accent);letter-spacing:-.03em}
+.day .date small{display:block;font-size:13px;font-family:var(--body);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.day .t{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day h3{font-size:24px;margin-top:4px}
+.day .tog{width:42px;height:42px;border-radius:999px;background:var(--tint);display:grid;place-items:center;font-size:20px;transition:transform .3s}
+details[open] .tog{transform:rotate(45deg);background:var(--accent);color:#fff}
+.day .inner{padding:0 26px 28px 144px}
+.day .inner p{color:var(--muted);margin-bottom:16px}
+.day .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.day .tags span{background:var(--tint);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.badge-c{display:inline-block;background:var(--ink);color:var(--sun);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;letter-spacing:.06em;margin-left:8px;vertical-align:middle}
+
+/* networking */
+.people{position:relative;color:var(--on-dark);background:var(--ink) url(https://codiceiknosys.com/foto/palco-persone-1280.webp) center/cover;padding:140px 0}
+.people::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,18,38,.95) 30%,rgba(11,18,38,.55))}
+.people .wrap{position:relative}
+.people h2{max-width:20ch}
+.people .lines{margin:30px 0 36px;display:grid;gap:10px;max-width:58ch;color:var(--on-dark-muted);font-size:18px}
+.people .lines strong{color:var(--on-dark)}
+.people .final{font-family:var(--display);font-size:clamp(24px,2.6vw,34px);font-weight:700;line-height:1.2;max-width:28ch;margin-bottom:34px}
+
+/* sponsor */
+.sponsors{background:var(--surface);padding:80px 0;text-align:center}
+.sponsors h2{font-size:clamp(28px,3.2vw,40px)}
+.sponsors p{margin:12px auto 32px;color:var(--muted)}
+.logos{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.logos div{aspect-ratio:3/2;border:2px dashed #d9a400;background:#fff6d6;border-radius:12px;display:grid;place-items:center;font-size:12px;font-weight:700;letter-spacing:.1em;color:#8a6500}
+
+/* centurion */
+.centurion{background:var(--ink-2);color:var(--on-dark)}
+.centurion .head{max-width:860px}
+.centurion .head p{color:var(--on-dark-muted);margin-top:22px;font-size:18px}
+.centurion .head p strong{color:var(--sun)}
+.c-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:52px 0 40px}
+.c-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-card);overflow:hidden;display:grid;grid-template-columns:42% 1fr}
+.c-item img{width:100%;height:100%;object-fit:cover;min-height:240px}
+.c-item .body{padding:26px}
+.c-item .k{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sun)}
+.c-item h3{margin:8px 0 10px}
+.c-item p{font-size:15.5px;color:var(--on-dark-muted)}
+.c-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgba(255,204,61,.08);border:1px solid rgba(255,204,61,.3);border-radius:var(--r-card);padding:28px 32px}
+.c-cta p{max-width:58ch;color:var(--on-dark)}
+
+/* biglietti */
+.tickets{background:var(--tint)}
+.tickets .head{text-align:center;max-width:760px;margin:0 auto 48px}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:0 auto}
+.ticket{background:var(--surface);border-radius:var(--r-card);padding:34px;display:flex;flex-direction:column}
+.ticket.vip{background:var(--ink);color:var(--on-dark)}
+.ticket .name{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ticket .name h3{font-size:30px;font-weight:800}
+.flag{background:var(--sun);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.price{margin:22px 0 6px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.price strong{font-family:var(--display);font-size:64px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.price s{color:var(--muted);font-size:20px}
+.price small{color:var(--muted);font-size:15px}
+.ticket.vip .price small,.ticket.vip .sub{color:var(--on-dark-muted)}
+.ticket .sub{font-size:15px;color:var(--muted);margin-bottom:24px}
+.ticket ul{list-style:none;display:grid;gap:12px;margin-bottom:30px;flex:1}
+.ticket li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:15.5px;line-height:1.45}
+.ticket li i{font-size:20px;color:var(--accent);margin-top:1px}
+.ticket.vip li i{color:var(--sun)}
+.ticket li.off{color:#9aa1b8}
+.ticket li.off i{color:#c3c8d8}
+.ticket .btn{justify-content:center}
+.pay{max-width:1000px;margin:20px auto 0}
+.guarantee{max-width:1000px;margin:56px auto 0;background:var(--surface);border-radius:var(--r-card);overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr}
+.guarantee img{width:100%;height:100%;object-fit:cover}
+.guarantee .body{padding:40px}
+.guarantee h3{font-size:32px;font-weight:800;margin-bottom:16px}
+.guarantee p{color:var(--muted);font-size:16px;margin-bottom:12px}
+.guarantee .how{background:var(--tint);border-radius:12px;padding:16px 18px;color:var(--text);font-weight:500}
+.guarantee .seg{margin-top:14px}
+
+/* faq */
+.faq{background:var(--ink);color:var(--on-dark)}
+.faq .layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.faq .intro p{color:var(--on-dark-muted);margin:20px 0 28px}
+.faq details{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:600;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{transition:transform .3s;font-size:20px;color:var(--sun)}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p,.faq details .seg{margin-bottom:22px}
+.faq details p{color:var(--on-dark-muted)}
+.form-ph{margin-top:8px}
+
+footer{background:#070c1b;color:var(--on-dark-muted);padding:56px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:end}
+footer .logo{display:block;margin-bottom:10px}
+footer a{color:var(--on-dark-muted)}
+
+/* modale video */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(5,9,22,.86);display:none;place-items:center;padding:24px}
+.modal.open{display:grid}
+.modal .box{width:min(420px,100%);aspect-ratio:9/16;position:relative}
+.modal iframe{width:100%;height:100%;border:0;border-radius:var(--r-card)}
+.modal button{position:absolute;top:-48px;right:0;background:none;border:0;color:#fff;font-size:32px;cursor:pointer}
+
+/* comparsa allo scroll */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0)*70ms)}
+  .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .marquee{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+  html{scroll-behavior:auto}
+}
+
+/* responsive */
+@media (max-width:1080px){
+  nav ul{gap:18px}
+  nav a{font-size:14px}
+  .vids{grid-template-columns:repeat(3,1fr)}
+  .spk-grid{grid-template-columns:repeat(2,1fr)}
+  .logos{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  nav{display:none}
+  nav.open{display:block;position:absolute;top:68px;left:0;right:0;background:var(--ink);padding:16px 24px 24px}
+  nav.open ul{flex-direction:column;gap:16px}
+  .burger{display:block}
+  .nav .btn{display:none}
+  .pillars,.tracks .layout,.faq .layout,.guarantee,.t-grid,.c-grid{grid-template-columns:1fr}
+  .pillar.big{grid-row:auto}
+  .tracks .intro{position:static}
+  .grid6{grid-template-columns:1fr 1fr}
+  .nums{grid-template-columns:1fr 1fr}
+  .problem .stats{grid-template-columns:1fr}
+  .closing,.c-cta{flex-direction:column;align-items:flex-start}
+  .testi .head{flex-direction:column;align-items:flex-start}
+  .day .inner{padding:0 26px 26px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:76px 0}
+  .topbar{font-size:13px}
+  .cd span{min-width:38px;padding:2px 6px}
+  .grid6,.nums,.spk-grid{grid-template-columns:1fr}
+  .vids{grid-template-columns:1fr 1fr}
+  .logos{grid-template-columns:repeat(2,1fr)}
+  .pillar.side{flex-direction:column}
+  .pillar.side img{width:100%;height:200px}
+  .c-item{grid-template-columns:1fr}
+  .c-item img{min-height:200px;max-height:220px}
+  details.day summary{grid-template-columns:64px 1fr auto;gap:14px;padding:18px}
+  .day .date{font-size:40px}
+  .ticket{padding:26px}
+  .price strong{font-size:52px}
+  .guarantee .body{padding:26px}
+  .marquee img{height:160px;width:240px}
+  .hero{padding:48px 0 72px}
+  .btn{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. BARRA COUNTDOWN -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Riserva il tuo posto ora!</span>
+    <div class="cd" aria-label="Tempo mancante all'evento">
+      <span><b id="cd-d">00</b><small>g</small></span>
+      <span><b id="cd-h">00</b><small>h</small></span>
+      <span><b id="cd-m">00</b><small>m</small></span>
+      <span><b id="cd-s">00</b><small>s</small></span>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="assets/logo-codice-iknosys.webp" alt="Codice Iknosys" width="118" height="40"></a>
+    <nav id="menu">
+      <ul>
+        <li><a href="#esperienza">La giornata</a></li>
+        <li><a href="#speaker">Speaker</a></li>
+        <li><a href="#programma">Programma</a></li>
+        <li><a href="#biglietti">Biglietti</a></li>
+        <li><a href="#testimonianze">Testimonianze</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto <i class="ph ph-arrow-right"></i></a>
+    <button class="burger" aria-label="Apri il menu" aria-expanded="false"><i class="ph ph-list"></i></button>
+  </div>
+</header>
+
+<!-- 2. HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <!-- immagine di sfondo scelta da Cristiano: speaker e staff sul palco, edizione 2025 -->
+    <img src="https://codiceiknosys.com/foto/ed25-05-1920.webp" srcset="https://codiceiknosys.com/foto/ed25-05-1280.webp 1280w, https://codiceiknosys.com/foto/ed25-05-1920.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
+  </div>
+  <div class="wrap">
+    <div class="pill rv">17 novembre 2026 · Fiera di Cagliari, Padiglione Mediterraneo <a href="#biglietti">Biglietti</a></div>
+    <h1 class="rv" style="--i:1">Codice Iknosys</h1>
+    <p class="claim rv" style="--i:2">Da <b>5 anni</b> la tua finestra sul futuro della ristorazione.</p>
+    <div class="ctas rv" style="--i:3">
+      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+      <a class="btn ghost" href="#esperienza">Scopri la giornata</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. L'ESPERIENZA -->
+<section class="exp" id="esperienza">
+  <div class="wrap">
+    <div class="intro-head">
+      <span class="eyebrow">L'esperienza</span>
+      <h2 class="rv">Cos'è Codice Iknosys e <span class="blue">perché dovresti venire?</span></h2>
+      <p class="rv">Codice Iknosys è l'appuntamento annuale della ristorazione in Sardegna: una giornata di formazione con speaker italiani su marketing, numeri e processi, per i ristoratori che vogliono gestire il proprio locale come una vera azienda.</p>
+    </div>
+    <h3 class="why rv">Perché partecipare? Rispondi con sincerità a <span class="blue">tre domande</span></h3>
+    <p class="premise rv">Se domani non ti presenti nel tuo ristorante…</p>
+
+    <div class="questions">
+      <div class="q rv"><i class="ph ph-users-three"></i><h3>I tuoi clienti continuerebbero a essere accolti con la stessa cura di sempre?</h3></div>
+      <div class="q rv" style="--i:1"><i class="ph ph-compass"></i><h3>Il tuo staff saprebbe prendere decisioni con sicurezza, anche senza di te?</h3></div>
+      <div class="q rv" style="--i:2"><i class="ph ph-phone-slash"></i><h3>Il telefono non squillerebbe ogni 5 minuti per chiederti cosa fare?</h3></div>
+    </div>
+    <p class="after rv">Se hai risposto anche solo a una domanda «no» o «non lo so», non è una tua mancanza: oggi il tuo locale funziona perché ci sei tu, non perché ha un metodo. E un ristorante che accoglie, decide e vende anche senza il titolare ti sembra difficile da immaginare solo perché nessuno ti ha mai insegnato a costruirlo.</p>
+    <p class="answer rv">Codice Iknosys esiste per questo: una giornata per imparare come si costruisce un ristorante che <span class="blue">va avanti anche senza di te</span>.</p>
+
+    <div class="pillars">
+      <article class="pillar big rv">
+        <!-- immagine da decidere -->
+        <div class="body">
+          <span class="k">Speaker</span>
+          <h3>Impara da chi ce l'ha già fatta</h3>
+          <p>Fianco a fianco con i migliori speaker italiani su marketing, numeri e processi per la ristorazione. Non sentirai teoria fine a se stessa, ma soluzioni concrete, già testate da chi prima di te ha trasformato il proprio locale in un'azienda solida e capace di generare risultati anche quando il titolare non è lì a controllare ogni singolo dettaglio.</p>
+        </div>
+      </article>
+      <article class="pillar side rv" style="--i:1">
+        <img src="https://codiceiknosys.com/foto/gg-02-1280.webp" alt="La giornata del 17 novembre">
+        <div class="body">
+          <span class="k">Formazione</span>
+          <h3>Una giornata tutta per te</h3>
+          <p>Sei ore di formazione, speaker, confronti e idee concrete da portare subito nel tuo ristorante, lontano dal locale, per tornare con una visione diversa di come gestirlo.</p>
+        </div>
+      </article>
+      <article class="pillar side rv" style="--i:2">
+        <img src="https://codiceiknosys.com/foto/cb-01-1280.webp" alt="Coffee break tra i ristoratori">
+        <div class="body">
+          <span class="k">Persone</span>
+          <h3>Non sei solo</h3>
+          <p>Tra un caffè e l'altro, a pranzo, nei momenti di pausa, avrai l'occasione di parlare con ristoratori, imprenditori e professionisti che vivono le tue stesse giornate.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="closing rv">
+      <p>È la tua occasione per tornare a essere tu a decidere il ritmo delle tue giornate, e iniziare a costruire la realtà che hai sempre desiderato per te e per chi ami.</p>
+      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CREDIBILITÀ -->
+<section class="cred">
+  <div class="wrap">
+    <h2 class="rv">Questo luogo ha un nome, una storia e <span class="hl">migliaia di ristoratori sardi</span> al suo fianco</h2>
+    <p class="lead rv">Codice Iknosys nasce nel 2022 dalla visione di Riccardo Fagioli, con un solo obiettivo: stare al fianco dei ristoratori sardi. È l'unico evento di formazione in Sardegna interamente dedicato alla ristorazione.</p>
+    <p class="lead rv">Più che un evento, è un ecosistema di persone che si sostengono a vicenda: ristoratori che hanno scelto di non restare soli davanti alle difficoltà del settore, e di imparare insieme a gestire il proprio locale con più serenità, competenza e visione.</p>
+    <div class="trailer rv">
+      <video preload="metadata" playsinline poster="video/trailer-codice-iknosys-2025-poster.jpg">
+        <source src="video/trailer-codice-iknosys-2025-1080p.mp4" type="video/mp4" media="(min-width: 1200px)">
+        <source src="video/trailer-codice-iknosys-2025-720p.webm" type="video/webm">
+        <source src="video/trailer-codice-iknosys-2025-720p.mp4" type="video/mp4">
+      </video>
+      <button class="play" type="button" aria-label="Guarda il trailer di Codice Iknosys 2025"><span><i class="ph-fill ph-play-circle"></i>Guarda il trailer 2025</span></button>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <img src="https://codiceiknosys.com/foto/ed25-02-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-04-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-05-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-06-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-07-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-08-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-09-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-10-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-11-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-12-1280.webp" alt="">
+    <img src="https://codiceiknosys.com/foto/ed25-02-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-04-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-05-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-06-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-07-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-08-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-09-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-10-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-11-1280.webp" alt=""><img src="https://codiceiknosys.com/foto/ed25-12-1280.webp" alt="">
+  </div>
+</section>
+
+<!-- 5. PER CHI È -->
+<section class="forwho">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker rv">Ristoratore... guarda quanta strada hai fatto fino a qui!</div>
+      <h2 class="rv">Codice Iknosys è <span class="hl">PER TE</span> se…</h2>
+      <p class="lead rv">Hai aperto la porta del tuo locale ogni giorno, hai creduto in un sogno e l'hai costruito con le tue mani, spesso senza che nessuno ti insegnasse davvero come si gestisce un'impresa di ristorazione.</p>
+    </div>
+    <div class="grid6">
+      <div class="who rv"><i class="ph ph-clock-countdown"></i><h3>Sei il primo ad arrivare e l'ultimo ad andartene</h3><p class="seg">Le giornate scivolano via tra mille cose da fare, e il tempo per te e per la tua famiglia si è fatto sempre più piccolo.</p></div>
+      <div class="who rv" style="--i:1"><i class="ph ph-hand-arrow-up"></i><h3>Vuoi imparare a delegare senza perdere il controllo</h3><p class="seg">Vuoi che il tuo staff prenda le decisioni di ogni giorno con sicurezza, come le prenderesti tu, senza chiamarti per ogni dubbio.</p></div>
+      <div class="who rv" style="--i:2"><i class="ph ph-users"></i><h3>Cerchi le persone giuste per il tuo team</h3><p class="seg">Trovare cuochi e addetti di sala preparati è sempre più difficile. Qui impari quante persone ti servono davvero, quanto costano e come formarle, anche alla vendita.</p></div>
+      <div class="who rv"><i class="ph ph-arrows-split"></i><h3>Vuoi smettere di fare tutto da solo</h3><p class="seg">Oggi il tuo locale funziona perché ci sei tu. Vuoi che funzioni secondo un sistema, con procedure chiare e un team che sa cosa fare.</p></div>
+      <div class="who rv" style="--i:1"><i class="ph ph-chart-line-down"></i><h3>Hai la sensazione di navigare a vista</h3><p class="seg">Lavori tanto, ma non sai con certezza quanto ti resta davvero su ogni piatto e dove se ne va il margine.</p></div>
+      <div class="who rv" style="--i:2"><i class="ph ph-storefront"></i><h3>Stai per aprire un locale</h3><p class="seg">Tra immaginare un ristorante e costruire un'impresa che sta sul mercato c'è una differenza enorme. Il momento migliore per imparare a gestirlo è prima di aprirlo, non il giorno dopo.</p></div>
+    </div>
+    <p class="note rv">Se ti riconosci in questo, sappi una cosa: non sei l'unico, e non è colpa tua. Nessuno ti ha mai dato davvero gli strumenti per farlo.</p>
+  </div>
+</section>
+
+<!-- 6. FASCIA SCURA -->
+<section class="dark problem">
+  <div class="wrap">
+    <h2 class="rv">Non sei tu il problema, è un sistema che non perdona chi non ha gli strumenti giusti</h2>
+    <div class="stats">
+      <div class="stat rv"><strong>5 ore</strong><span>In Sardegna, ogni 5 ore un locale chiude per sempre.</span></div>
+      <div class="stat rv" style="--i:1"><strong>48%</strong><span>Delle attività non arriva nemmeno al quinto anno di vita.</span></div>
+      <div class="stat rv" style="--i:2"><strong>11.000+</strong><span>Posti di lavoro persi: dietro ogni chiusura ci sono persone che hanno dato tutto.</span></div>
+    </div>
+    <p class="rv">Non chiudono perché manca la passione o perché il cibo non è buono: di quello, in Sardegna, non manca mai. Chiudono perché nessuno ha mai insegnato loro come si governa davvero un'attività di ristorazione, oggi.</p>
+    <p class="good rv">La buona notizia è che chi affronta questi numeri con il metodo giusto può scrivere una storia diversa.</p>
+    <div class="seg seg-quote rv"><b>Segnaposto: citazione di un partecipante</b>Una frase forte di un partecipante, con valutazione a 5 stelle. Estrarre una frase di massimo 3 righe da una delle interviste video 2025 (es. Silvana Frau o Gianni Floris, Spiaggia del Riso) con nome e locale.</div>
+  </div>
+</section>
+
+<!-- 7. NUMERI + BENEFICI -->
+<section class="benefits">
+  <div class="wrap">
+    <div class="top">
+      <span class="eyebrow">Un solo biglietto</span>
+      <h2 class="rv">Una giornata intera pensata per <span class="hl">darti il massimo</span></h2>
+    </div>
+    <div class="nums">
+      <div class="num rv"><strong data-to="5">5</strong><strong>ª</strong><span>Edizione</span><p>5 anni di formazione e networking con ospiti d'eccellenza.</p></div>
+      <div class="num rv" style="--i:1"><strong>+</strong><strong data-to="1000">1000</strong><span>Ristoratori</span><p>Presenti alle precedenti edizioni, che hanno già scelto di cambiare rotta.</p></div>
+      <div class="num rv" style="--i:2"><strong>+</strong><strong data-to="30">30</strong><span>Sponsor</span><p>Hanno scelto di sostenere la nostra visione.</p></div>
+      <div class="num rv" style="--i:3"><strong data-to="6">6</strong><span>Ore di formazione</span><p>Speaker, confronti e idee concrete da portare subito nel tuo ristorante.</p></div>
+    </div>
+    <div class="chips rv">
+      <span class="chip"><i class="ph ph-microphone-stage"></i>I migliori speaker italiani su marketing, numeri e processi</span>
+      <span class="chip"><i class="ph ph-wrench"></i>Soluzioni concrete, già testate</span>
+      <span class="chip"><i class="ph ph-armchair"></i>Posto in Zona Gold</span>
+      <span class="chip"><i class="ph ph-handbag"></i>Welcome bag</span>
+      <span class="chip"><i class="ph ph-fork-knife"></i>Pranzo a buffet nell'area Gold</span>
+      <span class="chip"><i class="ph ph-coffee"></i>Due pause caffè</span>
+      <span class="chip"><i class="ph ph-handshake"></i>Confronto con ristoratori e professionisti</span>
+      <span class="chip"><i class="ph ph-shield-check"></i>Rimborso totale se non sei soddisfatto</span>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SPEAKER -->
+<section class="speakers" id="speaker">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Le persone che ti accompagneranno in questo percorso</h2>
+      <p class="lead rv" style="margin-top:20px">Quattro professionisti, quattro competenze diverse, un solo obiettivo: aiutarti a guidare il tuo ristorante come una vera azienda.</p>
+    </div>
+    <div class="spk-grid">
+      <article class="spk rv"><div class="photo"><img src="https://codiceiknosys.com/foto/sp-fagioli-1280.webp" alt="Riccardo Fagioli"></div><span class="role">Creatore Codice Iknosys</span><h3>Riccardo Fagioli</h3><p class="claim">L'imprenditore che trasforma i ristoranti in aziende</p><p class="bio">Imprenditore specializzato nello sviluppo del business nella ristorazione, da anni lavora al fianco dei ristoratori per organizzare meglio le loro attività e prendere decisioni più consapevoli. Fondatore di Black Bull Academy e ideatore del Metodo Matador, che integra analisi, posizionamento, marketing e gestione.</p></article>
+      <article class="spk rv" style="--i:1"><div class="photo"><img src="https://codiceiknosys.com/foto/sp-tugnoli-1280.webp" alt="Eros Tugnoli"></div><span class="role">Comunicazione e relazione con il cliente</span><h3>Eros Tugnoli</h3><p class="claim">Il comunicatore che trasforma le aziende in squadre vincenti</p><p class="bio">Formatore, consulente e coach, è tra i massimi esperti italiani di comunicazione strategica e negoziazione persuasiva. Allievo di Edward de Bono, unisce metodo, creatività e pratica «sul campo» per costruire team che sanno vendere, motivare e crescere.</p></article>
+      <article class="spk rv" style="--i:2"><div class="photo"><img src="https://codiceiknosys.com/foto/sp-ingegnere-1280.webp" alt="Daniele Cavallini"></div><span class="role">Analisi dati e intelligenza artificiale</span><h3>Daniele Cavallini</h3><p class="claim">Controllo, metodo e libertà d'impresa</p><p class="bio">Imprenditore, consulente e autore, da oltre trent'anni aiuta le PMI italiane a trasformare la passione in profitto. Fondatore di CP S.p.A. e ideatore del metodo Impresa Perfetta, insegna agli imprenditori a leggere, capire e dominare i numeri.</p></article>
+      <article class="spk rv" style="--i:3"><div class="photo"><img src="https://codiceiknosys.com/foto/sp-architetto-1280.webp" alt="Roberto Bonazzi"></div><span class="role">Strategia</span><h3>Roberto Bonazzi</h3><p class="claim">Il visionario che anticipa il futuro delle imprese</p><p class="bio">Da oltre quarant'anni guida imprenditori e PMI nella crescita attraverso strategie innovative, semplici ed efficaci. Con una mente analitica e una visione proiettata al domani, esplora l'impatto dell'intelligenza artificiale sulla gestione dei clienti e sul modo di fare impresa.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 9. TESTIMONIANZE -->
+<section class="testi" id="testimonianze">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Cosa dicono di Codice Iknosys</h2>
+    </div>
+    <div class="vids">
+      <button class="vid rv" data-video="https://player.vimeo.com/video/1166624430?autoplay=1"><img src="https://codiceiknosys.com/foto/int-frau-1280.webp" alt=""><span class="play"><i class="ph-fill ph-play"></i>0:41</span><span class="meta"><b>Silvana Frau</b><small>Spiaggia del Riso</small></span></button>
+      <button class="vid rv" style="--i:1" data-video="https://player.vimeo.com/video/1166628307?autoplay=1"><img src="https://codiceiknosys.com/foto/int-floris-1280.webp" alt=""><span class="play"><i class="ph-fill ph-play"></i>0:31</span><span class="meta"><b>Gianni Floris</b><small>Spiaggia del Riso</small></span></button>
+      <button class="vid rv" style="--i:2" data-video="https://player.vimeo.com/video/1166630211?autoplay=1"><img src="https://codiceiknosys.com/foto/int-demelas-1280.webp" alt=""><span class="play"><i class="ph-fill ph-play"></i>0:30</span><span class="meta"><b>Giuseppe Demelas</b><small>Reckon</small></span></button>
+      <button class="vid rv" style="--i:3" data-video="https://player.vimeo.com/video/1166633212?autoplay=1"><img src="https://codiceiknosys.com/foto/int-sforza-1280.webp" alt=""><span class="play"><i class="ph-fill ph-play"></i>1:02</span><span class="meta"><b>Barbara Sforza</b><small>Prof. Alberghiero Gramsci</small></span></button>
+      <button class="vid rv" style="--i:4" data-video="https://player.vimeo.com/video/1166644010?autoplay=1"><img src="https://codiceiknosys.com/foto/int-dandrea-1280.webp" alt=""><span class="play"><i class="ph-fill ph-play"></i>0:34</span><span class="meta"><b>Giancarlo D'Andrea</b><small>626 School</small></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 10. TEMI -->
+<section class="tracks">
+  <div class="wrap layout">
+    <div class="intro">
+      <h2 class="rv">I temi della giornata</h2>
+      <p class="rv">Una sola giornata, quattro temi che toccano ogni parte del tuo ristorante: dove stai andando, come accogli chi entra, cosa ti resta in cassa e come fai tornare i clienti.</p>
+      <a class="btn rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <div>
+      <div class="track rv"><span class="n">01</span><div><h3>Visione e gestione</h3><div class="who-s">Riccardo Fagioli</div><div class="seg"><b>Segnaposto</b>Cosa imparerai: il ruolo del gestionale e dei dati, perché l'IA va capita prima di usarla (dal canovaccio 2026).</div></div></div>
+      <div class="track rv"><span class="n">02</span><div><h3>Il servizio che fa tornare i clienti</h3><div class="who-s">Eros Tugnoli</div><p>Cosa distingue un semplice cameriere da un professionista della relazione: ogni gesto, parola e dettaglio del servizio può trasformarsi in un'esperienza memorabile, o in un disastro annunciato. Con esempi concreti e tecniche di comunicazione persuasiva, scopri le leve psicologiche che generano soddisfazione, fiducia e vendita naturale.</p></div></div>
+      <div class="track rv"><span class="n">03</span><div><h3>Numeri e controllo di gestione</h3><div class="who-s">Daniele Cavallini</div><p>Ogni ristoratore ha un piano, ma pochi sanno davvero eseguirlo. Smonti le abitudini che bruciano margini e impari le tre regole fondamentali del controllo: conoscere i costi reali di ogni piatto, misurare il valore del lavoro e individuare il punto di pareggio. Perché solo chi controlla i propri numeri può conquistare la vera libertà imprenditoriale.</p></div></div>
+      <div class="track rv"><span class="n">04</span><div><h3>Dati dei clienti, CRM e intelligenza artificiale</h3><div class="who-s">Roberto Bonazzi</div><p>Il vero capitale di un locale non è il menu o l'arredamento, ma il patrimonio di dati dei propri clienti. Scopri come usare un CRM e l'intelligenza artificiale per costruire relazioni durature, aumentare la fidelizzazione e prevedere i comportamenti d'acquisto, con comunicazioni mirate e azioni di marketing automatizzate.</p></div></div>
+      <div class="seg rv" style="margin-top:24px"><b>Da confermare</b>Le descrizioni dei temi 02-04 vengono dagli interventi del magazine Codice Iknosys, che per Daniele Cavallini cita l'edizione 2025: verificare che valgano per il 2026.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. PROGRAMMA -->
+<section class="program" id="programma">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Scopri il programma</h2>
+      <p class="rv">C'è un momento in cui smetti di subire il tuo ristorante e cominci a guidarlo. Noi lo chiamiamo il Risveglio.</p>
+    </div>
+    <div class="days">
+      <details class="day rv">
+        <summary><span class="date">16<small>Lunedì</small></span><span><span class="t">Masterclass <span class="badge-c">Solo Centurion</span></span><h3>Masterclass Centurion</h3></span><span class="tog"><i class="ph ph-plus"></i></span></summary>
+        <div class="inner">
+          <p>Il giorno prima dell'evento principale, abbiamo riservato uno spazio diverso: più piccolo, più intimo, pensato per chi sente che una giornata da sola non basta. Un momento di lavoro più ravvicinato con Riccardo Fagioli, dove si scende nel concreto del tuo ristorante.</p>
+          <div class="seg"><b>Segnaposto</b>Orario e luogo della masterclass.</div>
+        </div>
+      </details>
+      <details class="day rv" open>
+        <summary><span class="date">17<small>Martedì</small></span><span><span class="t">Mattina</span><h3>Formazione con gli speaker</h3></span><span class="tog"><i class="ph ph-plus"></i></span></summary>
+        <div class="inner">
+          <div class="seg"><b>Segnaposto: descrizione mattina</b>Due righe sul beneficio della mattina (dal canovaccio 2026: smontare le convinzioni sbagliate su gestione e IA). Inserire la scaletta solo quando definitiva.</div>
+          <div class="tags"><span>Check-in</span><span>Speech</span><span>Coffee break</span><span>Pausa pranzo nell'area Gold</span></div>
+        </div>
+      </details>
+      <details class="day rv">
+        <summary><span class="date">17<small>Martedì</small></span><span><span class="t">Pomeriggio</span><h3>Dalla teoria all'azione</h3></span><span class="tog"><i class="ph ph-plus"></i></span></summary>
+        <div class="inner">
+          <div class="seg"><b>Segnaposto: descrizione pomeriggio</b>Due righe sul beneficio del pomeriggio (dal canovaccio: storie di ristoratori premiati, "cosa fare subito da domani", aperitivo finale). Titolo della card da validare.</div>
+          <div class="tags"><span>Speech</span><span>Coffee break</span><span>Chiusura e saluti</span></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FASCIA PERSONE -->
+<section class="people">
+  <div class="wrap">
+    <h2 class="rv">Ma c'è un'altra cosa che rende speciale Codice Iknosys... <span style="color:var(--sun)">le persone</span> che incontrerai</h2>
+    <div class="lines rv">
+      <span>C'è chi sta imparando a delegare senza perdere il controllo.</span>
+      <span>Chi ha scoperto come trovare le persone giuste per il proprio team.</span>
+      <span>Chi è riuscito, poco a poco, a smettere di fare tutto da solo.</span>
+      <span><strong>E c'è anche chi, proprio come te, oggi sta affrontando gli stessi ostacoli.</strong></span>
+    </div>
+    <p class="final rv">Le risposte che cerchi spesso le ha già trovate la persona che ti siede accanto.</p>
+    <a class="btn sun rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- 13. SPONSOR -->
+<section class="sponsors">
+  <div class="wrap">
+    <h2 class="rv">Gli sponsor di Codice Iknosys</h2>
+    <p class="rv">Oltre 30 aziende hanno scelto di sostenere la nostra visione.</p>
+    <div class="logos rv"><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div></div>
+    <div class="seg rv" style="margin-top:16px;text-align:left"><b>Segnaposto</b>Loghi degli sponsor 2026 in SVG o PNG trasparente, monocromatici.</div>
+  </div>
+</section>
+
+<!-- 14. CENTURION -->
+<section class="centurion">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="color:var(--sun)">Il biglietto più esclusivo</span>
+      <h2 class="rv">Vuoi vivere Codice Iknosys da una prospettiva diversa? Entra a far parte dei <span style="color:var(--sun)">Centurion</span></h2>
+      <p class="rv">Non è solo "un biglietto più completo": è un'esperienza pensata per chi vuole entrare ancora più a fondo nel metodo, con uno spazio, un'attenzione e un livello di accesso diversi da quelli di chiunque altro in fiera.</p>
+    </div>
+    <div class="c-grid">
+      <article class="c-item rv"><img src="https://codiceiknosys.com/foto/mc-01-1280.webp" alt="Masterclass Centurion"><div class="body"><span class="k">16 novembre</span><h3>Masterclass Centurion</h3><p>Un momento di lavoro più ravvicinato con Riccardo Fagioli: non solo idee, ma applicazione diretta sui tuoi numeri, sul tuo team, sulle tue scelte di gestione. Per questo i posti sono volutamente pochi.</p></div></article>
+      <article class="c-item rv" style="--i:1"><img src="https://codiceiknosys.com/foto/zc-01-1280.webp" alt="La Zona Centurion"><div class="body"><span class="k">17 novembre</span><h3>La Zona Centurion</h3><p>Un tavolo tondo, servito dai nostri migliori partner. Potrai fare domande agli speaker e interagire direttamente con loro: un livello di accesso che in sala non è disponibile per tutti.</p></div></article>
+      <article class="c-item rv"><img src="https://codiceiknosys.com/foto/parcheggio-1280.webp" alt="Speaker sul palco di Codice Iknosys"><div class="body"><span class="k">Comodità</span><h3>Parcheggio privato</h3><p>Niente ricerca del parcheggio: come Centurion potrai parcheggiare dentro la fiera, in uno spazio privato e sorvegliato per tutta la durata dell'evento.</p></div></article>
+      <article class="c-item rv" style="--i:1"><img src="https://codiceiknosys.com/foto/pc-01-1280.webp" alt="Pausa pranzo Centurion"><div class="body"><span class="k">Pranzo</span><h3>Pausa pranzo Centurion</h3><p>Una zona dedicata solo a voi, seduti a tavola, con uno chef dedicato e un menù su misura. Un momento per ricaricarti davvero.</p></div></article>
+    </div>
+    <div class="c-cta rv">
+      <p>Il Biglietto Centurion è pensato per un numero molto ristretto di ristoratori, e per questo non è acquistabile direttamente online. Compila il form: ti richiamiamo noi!</p>
+      <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 15. BIGLIETTI -->
+<section class="tickets" id="biglietti">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Scegli il tuo biglietto</h2>
+    </div>
+    <div class="t-grid">
+      <article class="ticket rv">
+        <div class="name"><h3>GOLD</h3><span class="flag">Offerta limitata</span></div>
+        <div class="price"><strong>167€</strong><small>+ IVA</small><s>397€ + IVA</s></div>
+        <p class="sub">Prezzo offerta. Prezzo pieno 397€ + IVA.</p>
+        <ul>
+          <li><i class="ph ph-check-circle"></i>La giornata del 17 novembre: sei ore di formazione, speaker e confronti</li>
+          <li><i class="ph ph-check-circle"></i>Posto in Zona Gold, con ottima visuale sul palco</li>
+          <li><i class="ph ph-check-circle"></i>Welcome bag con i materiali dell'evento</li>
+          <li><i class="ph ph-check-circle"></i>Pranzo a buffet nell'area Gold</li>
+          <li><i class="ph ph-check-circle"></i>Due pause caffè</li>
+          <li class="off"><i class="ph ph-minus-circle"></i>Masterclass Centurion del 16 novembre</li>
+          <li class="off"><i class="ph ph-minus-circle"></i>Zona Centurion con domande dirette agli speaker</li>
+          <li class="off"><i class="ph ph-minus-circle"></i>Parcheggio privato e pranzo con chef dedicato</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+      </article>
+      <article class="ticket vip rv" style="--i:1">
+        <div class="name"><h3>CENTURION</h3><span class="flag">Posti limitati</span></div>
+        <div class="price"><strong style="font-size:40px">Su richiesta</strong></div>
+        <p class="sub">Non acquistabile direttamente online.</p>
+        <ul>
+          <li><i class="ph ph-check-circle"></i>La giornata del 17 novembre</li>
+          <li><i class="ph ph-check-circle"></i>Masterclass Centurion del 16 novembre con Riccardo Fagioli</li>
+          <li><i class="ph ph-check-circle"></i>Zona Centurion: tavolo tondo, servito dai migliori partner</li>
+          <li><i class="ph ph-check-circle"></i>Domande e interazione diretta con gli speaker</li>
+          <li><i class="ph ph-check-circle"></i>Parcheggio privato e sorvegliato dentro la fiera</li>
+          <li><i class="ph ph-check-circle"></i>Pausa pranzo seduti, con chef dedicato e menù su misura</li>
+        </ul>
+        <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
+      </article>
+    </div>
+    <div class="seg pay rv"><b>Segnaposto: pagamenti</b>Metodi di pagamento accettati, fattura, eventuale rateizzazione, pacchetto per più persone dello stesso locale (e.g. "Pagamento con carta, bonifico o in 3 rate"; "Vieni con il tuo team? Dai 3 persone c'è un pacchetto dedicato").</div>
+
+    <div class="guarantee rv">
+      <img src="https://codiceiknosys.com/foto/garanzia-1280.webp" alt="Riccardo Fagioli sul palco di Codice Iknosys">
+      <div class="body">
+        <h3>Partecipa in totale tranquillità</h3>
+        <p>Vogliamo che tu viva questa giornata con la mente libera, concentrato solo su quello che puoi portare a casa per il tuo ristorante. Per questo Codice Iknosys ha una garanzia semplice e chiara.</p>
+        <p class="how">Se a fine giornata senti che i contenuti non hanno risposto alle tue aspettative, lo dici a un membro dello staff e ti restituiamo per intero quanto investito. Senza domande, senza complicazioni.</p>
+        <p style="margin-top:14px">Della responsabilità ce ne occupiamo noi: a te resta solo il compito più bello. Vivere l'esperienza, fare tue le idee più utili, e creare connessioni che contano.</p>
+        <div class="seg"><b>Segnaposto: nome della garanzia</b>Nella landing attuale si chiama "Garanzia Matrix". Con l'abbandono del tema Matrix serve un nome nuovo (es. "Garanzia Soddisfatti o Rimborsati").</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap layout">
+    <div class="intro">
+      <h2 class="rv">Hai ancora domande e <span style="color:var(--sun)">curiosità</span>?</h2>
+      <p class="rv">Tutto quello che ti serve sapere per vivere la giornata al meglio. E se la tua domanda non è qui, scrivici: ti rispondiamo noi.</p>
+      <div class="seg form-ph rv"><b>Segnaposto: form HubSpot</b>Incorporare qui il form già presente sulla landing attuale (embed HubSpot), con titolo in positivo, e.g. "Scrivici la tua domanda: ti rispondiamo noi".</div>
+    </div>
+    <div>
+      <details class="rv"><summary>Se la giornata non mi soddisfa, posso avere il rimborso?<i class="ph ph-plus"></i></summary><p>Sì. Se al termine della giornata senti che i contenuti non hanno risposto alle tue aspettative, basta dirlo a un membro dello staff e ti restituiamo per intero quanto investito. Senza domande, senza complicazioni.</p></details>
+      <details class="rv"><summary>Come posso acquistare il Biglietto Centurion?<i class="ph ph-plus"></i></summary><p>Il Biglietto Centurion è pensato per un numero molto ristretto di ristoratori e non è acquistabile direttamente online: compila il form e ti richiamiamo noi.</p></details>
+      <details class="rv"><summary>Dove si svolge l'evento e a che ora inizia?<i class="ph ph-plus"></i></summary><div class="seg"><b>Segnaposto risposta</b>Fiera di Cagliari, Padiglione Mediterraneo, viale Armando Diaz 221. Orari ufficiali di check-in e chiusura da confermare.</div></details>
+      <details class="rv"><summary>Posso ricevere la fattura?<i class="ph ph-plus"></i></summary><div class="seg"><b>Segnaposto risposta</b>Procedura per la fattura in fase di acquisto su Stripe.</div></details>
+      <details class="rv"><summary>Posso portare il mio staff o il mio socio?<i class="ph ph-plus"></i></summary><div class="seg"><b>Segnaposto risposta</b>Condizioni per più biglietti dallo stesso locale.</div></details>
+      <details class="rv"><summary>Non posso più venire: posso cambiare il nome sul biglietto?<i class="ph ph-plus"></i></summary><div class="seg"><b>Segnaposto risposta</b>Regole per il cambio nominativo.</div></details>
+      <details class="rv"><summary>Codice Iknosys fa per me se non ho ancora aperto un locale?<i class="ph ph-plus"></i></summary><div class="seg"><b>Segnaposto risposta</b>Risposta per gli aspiranti ristoratori.</div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <span class="logo"><img src="assets/logo-codice-iknosys.webp" alt="Codice Iknosys" width="141" height="48"></span>
+      © 2026 Black Bull Group SRL, Via Arno 17, 09122 Cagliari. Cap. Soc. € 10.000,00 i.v. P.IVA 04051770925
+    </div>
+    <div><a href="https://www.iubenda.com/privacy-policy/11975237">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.iubenda.com/privacy-policy/11975237/cookie-policy">Cookie Policy</a></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video intervista">
+  <div class="box"><button aria-label="Chiudi il video"><i class="ph ph-x"></i></button><iframe title="Intervista" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+</div>
+
+<script>
+// countdown all'apertura dell'evento (17/11/2026 ore 9:00)
+(function(){
+  const end = new Date('2026-11-17T09:00:00+01:00').getTime();
+  const el = id => document.getElementById(id);
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    const d = Math.max(0, end - Date.now());
+    el('cd-d').textContent = pad(Math.floor(d/864e5));
+    el('cd-h').textContent = pad(Math.floor(d/36e5)%24);
+    el('cd-m').textContent = pad(Math.floor(d/6e4)%60);
+    el('cd-s').textContent = pad(Math.floor(d/1e3)%60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// menu mobile
+(function(){
+  const b = document.querySelector('.burger'), m = document.getElementById('menu');
+  b.addEventListener('click', () => { const o = m.classList.toggle('open'); b.setAttribute('aria-expanded', o); });
+  m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { m.classList.remove('open'); b.setAttribute('aria-expanded', false); }));
+})();
+
+// comparsa allo scroll e contatori
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if(!e.isIntersecting) return;
+    e.target.classList.add('in'); io.unobserve(e.target);
+  }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(n => io.observe(n));
+
+  const co = new IntersectionObserver(es => es.forEach(e => {
+    if(!e.isIntersecting) return;
+    co.unobserve(e.target);
+    const to = +e.target.dataset.to;
+    if(reduce) return;
+    const t0 = performance.now(), dur = 1400;
+    (function step(t){
+      const p = Math.min(1,(t-t0)/dur), v = Math.round(to*(1-Math.pow(1-p,3)));
+      e.target.textContent = v; if(p<1) requestAnimationFrame(step);
+    })(t0);
+  }), {threshold:.6});
+  document.querySelectorAll('[data-to]').forEach(n => co.observe(n));
+})();
+
+// trailer: si avvia al clic sul pulsante, poi mostra i controlli
+(function(){
+  const t = document.querySelector('.trailer'); if(!t) return;
+  const v = t.querySelector('video');
+  t.querySelector('.play').addEventListener('click', () => { t.classList.add('playing'); v.controls = true; v.play(); });
+})();
+
+// video interviste
+(function(){
+  const m = document.getElementById('modal'), f = m.querySelector('iframe');
+  document.querySelectorAll('.vid').forEach(v => v.addEventListener('click', () => { f.src = v.dataset.video; m.classList.add('open'); }));
+  const close = () => { m.classList.remove('open'); f.src = ''; };
+  m.querySelector('button').addEventListener('click', close);
+  m.addEventListener('click', e => { if(e.target === m) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>
