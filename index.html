@@ -127,7 +127,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Montserrat:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 <!--
@@ -207,8 +207,11 @@ nav a:hover{color:var(--on-dark)}
 .hero .wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.22);background:rgba(11,18,38,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:7px 8px 7px 16px;font-size:14.5px;font-weight:500;color:var(--on-dark)}
 .pill a{background:var(--accent);color:#fff;border-radius:999px;padding:5px 14px;text-decoration:none;font-weight:600}
-.hero h1{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 80;font-size:clamp(54px,9vw,140px);font-weight:800;letter-spacing:.01em;line-height:.9;margin:30px 0 18px;text-transform:uppercase;text-shadow:0 6px 40px rgba(5,9,22,.45)}
+/* nome dell'evento nel suo carattere: Montserrat, CODICE regular e IKNOSYS bold */
+.hero h1{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(44px,7.4vw,118px);font-weight:400;letter-spacing:.02em;line-height:.9;margin:30px 0 18px;text-transform:uppercase;text-shadow:0 6px 40px rgba(5,9,22,.45)}
 .hero .payoff{font-family:"Archivo",system-ui,sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;color:var(--sun);font-size:clamp(16px,1.7vw,24px);line-height:1.2;letter-spacing:.02em;max-width:none}
+.hero h1 .n1{font-weight:400}
+.hero h1 .n2{font-weight:700}
 .hero .claim{font-family:"Archivo",system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;color:var(--sun);font-size:clamp(22px,2.6vw,38px);line-height:1.12;letter-spacing:0;margin-top:18px;max-width:34ch;padding-bottom:4px}
 .hero .claim b{color:var(--on-dark);font-weight:900}
 /* al passaggio del mouse: glitch verde (mezzo secondo), poi torna fermo */
@@ -556,7 +559,7 @@ footer a{color:var(--on-dark-muted)}
   </div>
   <div class="wrap">
     <div class="pill rv">17 novembre 2026 · Fiera di Cagliari, Padiglione Mediterraneo <a href="#biglietti">Biglietti</a></div>
-    <h1 class="rv" style="--i:1">Codice Iknosys</h1>
+    <h1 class="rv" style="--i:1"><span class="n1">Codice</span> <span class="n2">Iknosys</span></h1>
     <p class="claim rv" style="--i:2">Da <b>5 anni</b> la tua finestra sul futuro della ristorazione.</p>
     <div class="ctas rv" style="--i:3">
       <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
