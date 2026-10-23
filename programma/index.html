@@ -258,6 +258,17 @@ a:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
   if(cur&&!location.hash)setTimeout(function(){cur.scrollIntoView({block:'center',behavior:'smooth'})},600);
 })();
 
+// su Android i link a Instagram chiedono direttamente l'app (alcuni browser, come Opera, non la aprono da soli);
+// senza l'app installata si torna alla pagina web. iPhone e computer restano col link normale
+(function(){
+  if(!/Android/i.test(navigator.userAgent))return;
+  document.querySelectorAll('a[href^="https://www.instagram.com/"]').forEach(function(a){
+    var web=a.href,path=web.replace(/^https:\/\/www\.instagram\.com/,'');
+    a.href='intent://www.instagram.com'+path+'#Intent;scheme=https;package=com.instagram.android;S.browser_fallback_url='+encodeURIComponent(web)+';end';
+    a.removeAttribute('target');
+  });
+})();
+
 // la linguetta attiva segue la parte di programma visibile
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tabs a'));
