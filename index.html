@@ -358,7 +358,12 @@ nav a:hover{color:var(--on-dark)}
 .soon>*{position:relative}
 .soon-badge{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--sun);color:var(--ink);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .soon-badge i{font-size:17px}
-.soon h3{font-size:clamp(26px,2.8vw,36px);font-weight:800;margin:22px 0 12px}
+.soon h3{font-size:clamp(26px,2.8vw,36px);font-weight:800;margin:22px 0 18px}
+.soon-list{list-style:none;display:grid;gap:18px;margin:4px 0 22px}
+.soon-list li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.soon-list i{font-size:24px;color:var(--sun);margin-top:2px}
+.soon-list b{display:block;font-family:var(--display);font-size:19px;line-height:1.25;color:var(--on-dark);margin-bottom:6px}
+.soon-list span{display:block;font-size:15.5px;color:var(--on-dark-muted)}
 .soon p{color:var(--on-dark-muted);font-size:17px;max-width:46ch}
 @media (max-width:640px){.soon{padding:36px 24px;min-height:0}}
 /* programma */
@@ -453,6 +458,8 @@ details[open] .tog{transform:rotate(45deg);background:var(--accent);color:#fff}
 /* faq */
 .faq{background:var(--ink);color:var(--on-dark)}
 .faq .layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.faq-link{color:var(--sun);text-decoration:none;font-weight:600;white-space:nowrap}
+.faq-link:hover{text-decoration:underline}
 .faq .intro p{color:var(--on-dark-muted);margin:20px 0 28px}
 .faq details{border-bottom:1px solid rgba(255,255,255,.1)}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:600;font-size:18px}
@@ -760,7 +767,7 @@ footer a{color:var(--on-dark-muted)}
   <div class="wrap layout">
     <div class="intro">
       <h2 class="rv">I temi della giornata</h2>
-      <p class="rv">Una sola giornata, quattro temi che toccano ogni parte del tuo ristorante: dove stai andando, come accogli chi entra, cosa ti resta in cassa e come fai tornare i clienti.</p>
+      <p class="rv">Una sola giornata per guardare il tuo ristorante da ogni lato, dai numeri all'intelligenza artificiale.</p>
       <a class="btn rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
     </div>
     <!-- TEMI IN ARRIVO: i quattro temi sono qui sotto, commentati; quando arrivano i testi definitivi si rimette questo blocco al posto della card "Coming soon" -->
@@ -775,8 +782,12 @@ footer a{color:var(--on-dark-muted)}
     -->
     <div class="soon rv">
       <span class="soon-badge"><i class="ph ph-hourglass-medium"></i>Coming soon</span>
-      <h3>I temi saranno svelati a breve</h3>
-      <p>Stiamo definendo gli interventi del 17 novembre insieme agli speaker: a breve li trovi qui, con tutti i dettagli.</p>
+      <h3>Un'anteprima dei temi</h3>
+      <ul class="soon-list">
+        <li><i class="ph ph-sparkle"></i><div><b>L'intelligenza artificiale spiegata a chi gestisce un locale</b><span>Cosa cambia davvero per te e perché l'IA va capita prima, per usarla bene.</span></div></li>
+        <li><i class="ph ph-chart-bar"></i><div><b>I tuoi numeri, letti come si deve</b><span>Prezzo come posizionamento, menu engineering e a cosa ti serve un gestionale nel 2027: per capire quali piatti ti fanno guadagnare.</span></div></li>
+      </ul>
+      <p>Gli altri interventi del 17 novembre li stiamo definendo insieme agli speaker: a breve trovi qui il programma completo.</p>
     </div>
   </div>
 </section>
@@ -951,8 +962,7 @@ footer a{color:var(--on-dark-muted)}
   <div class="wrap layout">
     <div class="intro">
       <h2 class="rv">Hai ancora domande e <span style="color:var(--sun)">curiosità</span>?</h2>
-      <p class="rv">Tutto quello che ti serve sapere per vivere la giornata al meglio. E se la tua domanda non è qui, scrivici: ti rispondiamo noi.</p>
-      <div class="seg form-ph rv"><b>Segnaposto: form HubSpot</b>Incorporare qui il form già presente sulla landing attuale (embed HubSpot), con titolo in positivo, e.g. "Scrivici la tua domanda: ti rispondiamo noi".</div>
+      <p class="rv">Tutto quello che ti serve sapere per vivere la giornata al meglio. Per ogni altra domanda scrivici a <a class="faq-link" href="mailto:assistenza@iknosys.it">assistenza@iknosys.it</a> o chiama il numero verde <a class="faq-link" href="tel:800913293">800 913 293</a>: ti rispondiamo noi.</p>
     </div>
     <div>
       <details class="rv"><summary>Se la giornata non mi soddisfa, posso avere il rimborso?<i class="ph ph-plus"></i></summary><p>Sì. Se al termine della giornata senti che i contenuti non hanno risposto alle tue aspettative, basta dirlo a un membro dello staff e ti restituiamo per intero quanto investito. Senza domande, senza complicazioni.</p></details>
