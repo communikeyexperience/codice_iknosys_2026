@@ -125,6 +125,47 @@
  ]
 }
 </script>
+<!-- consenso cookie (iubenda), Google Analytics/Tag Manager, HubSpot e Contentsquare: stessi codici della pagina gold-2026 del sito -->
+<script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"bottom-left","perPurposeConsent":true,"siteId":3279872,"whitelabel":false,"cookiePolicyId":11975237,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonRejects":true,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-bottom-left" }};
+    </script><script type="text/javascript" src="https://cs.iubenda.com/sync/3428912.js"></script><script type="text/javascript" src="https://cdn.iubenda.com/cs/tcf/stub-v2.js"></script><script type="text/javascript" src="https://cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"></script><script type="text/javascript" src="https://cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script><!-- Tracciamento: solo sul dominio vero, mai da localhost --><script>
+      if (/(^|\.)codiceiknosys\.com$/.test(location.hostname)) {
+        // Google Analytics: tag GT-TBV3BL83 come lo installa Site Kit sulle pagine
+        // WordPress, con la stessa modalita' di consenso (tutto negato in Europa).
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500});
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=GT-TBV3BL83';
+        document.head.appendChild(ga);
+        gtag('set', 'linker', { domains: ['codiceiknosys.com'] });
+        gtag('js', new Date());
+        gtag('set', 'developer_id.dZTNiMT', true);
+        gtag('config', 'GT-TBV3BL83');
+
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRVX9798');
+        var hs = document.createElement('script');
+        hs.id = 'hs-script-loader';
+        hs.async = hs.defer = true;
+        hs.src = 'https://js-eu1.hs-scripts.com/139851162.js';
+        document.head.appendChild(hs);
+
+        // Contentsquare: progetto "Codice Iknosys", stesso tag delle pagine WordPress
+        var csq = document.createElement('script');
+        csq.defer = true;
+        csq.src = 'https://t.contentsquare.net/uxa/babc0358073a7.js';
+        document.head.appendChild(csq);
+      }
+    </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Montserrat:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -569,7 +610,7 @@ footer a{color:var(--on-dark-muted)}
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto <i class="ph ph-arrow-right"></i></a>
+    <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto <i class="ph ph-arrow-right"></i></a>
     <button class="burger" aria-label="Apri il menu" aria-expanded="false"><i class="ph ph-list"></i></button>
   </div>
 </header>
@@ -585,7 +626,7 @@ footer a{color:var(--on-dark-muted)}
     <h1 class="rv" style="--i:1"><span class="n1">Codice</span> <span class="n2">Iknosys</span></h1>
     <p class="claim rv" style="--i:2">Da <b>5 anni</b> la tua finestra sul futuro della ristorazione.</p>
     <div class="ctas rv" style="--i:3">
-      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
       <a class="btn ghost" href="#esperienza">Scopri la giornata</a>
     </div>
   </div>
@@ -639,7 +680,7 @@ footer a{color:var(--on-dark-muted)}
 
     <div class="closing rv">
       <p>È la tua occasione per tornare a essere tu a decidere il ritmo delle tue giornate, e iniziare a costruire la realtà che hai sempre desiderato per te e per chi ami.</p>
-      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+      <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -767,7 +808,7 @@ footer a{color:var(--on-dark-muted)}
     <div class="intro">
       <h2 class="rv">I temi della giornata</h2>
       <p class="rv">Una sola giornata per guardare il tuo ristorante da ogni lato, dai numeri all'intelligenza artificiale.</p>
-      <a class="btn rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+      <a class="btn rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
     </div>
     <!-- TEMI IN ARRIVO: i quattro temi sono qui sotto, commentati; quando arrivano i testi definitivi si rimette questo blocco al posto della card "Coming soon" -->
     <!--
@@ -837,7 +878,7 @@ footer a{color:var(--on-dark-muted)}
       <span><strong>E c'è anche chi, proprio come te, oggi sta affrontando gli stessi ostacoli.</strong></span>
     </div>
     <p class="final rv">Le risposte che cerchi spesso le ha già trovate la persona che ti siede accanto.</p>
-    <a class="btn sun rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+    <a class="btn sun rv" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
   </div>
 </section>
 
@@ -901,7 +942,7 @@ footer a{color:var(--on-dark-muted)}
     </div>
     <div class="c-cta rv">
       <p>Il Biglietto Centurion è pensato per un numero molto ristretto di ristoratori, e per questo non è acquistabile direttamente online. Compila il form: ti richiamiamo noi!</p>
-      <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
+      <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA" target="_blank" rel="noopener">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -927,7 +968,7 @@ footer a{color:var(--on-dark-muted)}
           <li class="off"><i class="ph ph-minus-circle"></i>Zona Centurion con domande dirette agli speaker</li>
           <li class="off"><i class="ph ph-minus-circle"></i>Parcheggio privato e pranzo con chef dedicato</li>
         </ul>
-        <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
+        <a class="btn" href="https://buy.stripe.com/7sY4gA8Ck2EW9K42sBa7C0E" target="_blank" rel="noopener">Riserva il tuo posto ora! <i class="ph ph-arrow-right"></i></a>
       </article>
       <article class="ticket vip rv" style="--i:1">
         <div class="name"><h3>CENTURION</h3><span class="flag">Posti limitati</span></div>
@@ -941,7 +982,7 @@ footer a{color:var(--on-dark-muted)}
           <li><i class="ph ph-check-circle"></i>Parcheggio privato e sorvegliato dentro la fiera</li>
           <li><i class="ph ph-check-circle"></i>Pausa pranzo seduti, con chef dedicato e menù su misura</li>
         </ul>
-        <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
+        <a class="btn sun" href="https://2b9hui.share-eu1.hsforms.com/2xRiZuNIuS-SaVOY2tQLwNA" target="_blank" rel="noopener">Voglio partecipare come Centurion <i class="ph ph-arrow-right"></i></a>
       </article>
     </div>
 
@@ -983,7 +1024,7 @@ footer a{color:var(--on-dark-muted)}
       <span class="logo"><img src="assets/logo-codice-iknosys.webp" alt="Codice Iknosys" width="141" height="48" decoding="async"></span>
       © 2026 Black Bull Group SRL, Via Arno 17, 09122 Cagliari. Cap. Soc. € 10.000,00 i.v. P.IVA 04051770925
     </div>
-    <div><a href="https://www.iubenda.com/privacy-policy/11975237">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.iubenda.com/privacy-policy/11975237/cookie-policy">Cookie Policy</a></div>
+    <div><a href="https://www.iubenda.com/privacy-policy/11975237" target="_blank" rel="noopener">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://www.iubenda.com/privacy-policy/11975237/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a></div>
   </div>
 </footer>
 
