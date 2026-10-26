@@ -385,8 +385,11 @@ details[open] .tog{transform:rotate(45deg);background:var(--accent);color:#fff}
 .sponsors{background:var(--surface);padding:80px 0;text-align:center}
 .sponsors h2{font-size:clamp(28px,3.2vw,40px)}
 .sponsors p{margin:12px auto 32px;color:var(--muted)}
-.logos{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.logos div{aspect-ratio:3/2;border:2px dashed #d9a400;background:#fff6d6;border-radius:12px;display:grid;place-items:center;font-size:12px;font-weight:700;letter-spacing:.1em;color:#8a6500}
+/* griglia loghi sponsor: righe centrate, ogni logo nel suo riquadro */
+.logos{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;list-style:none;max-width:1120px;margin:0 auto}
+.logos li{flex:0 0 calc((100% - 60px)/6);height:112px;background:var(--surface);border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:14px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
+.logos li:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(11,18,38,.08)}
+.logos img{max-width:86%;max-height:68px;width:auto;height:auto;object-fit:contain}
 
 /* centurion */
 .centurion{background:var(--ink-2);color:var(--on-dark)}
@@ -476,7 +479,7 @@ footer a{color:var(--on-dark-muted)}
   nav a{font-size:14px}
   .vids{grid-template-columns:repeat(3,1fr)}
   .spk-grid{grid-template-columns:repeat(2,1fr)}
-  .logos{grid-template-columns:repeat(3,1fr)}
+  .logos li{flex-basis:calc((100% - 36px)/4)}
 }
 @media (max-width:900px){
   nav{display:none}
@@ -502,7 +505,8 @@ footer a{color:var(--on-dark-muted)}
   .cd span{min-width:38px;padding:2px 6px}
   .grid6,.nums,.spk-grid{grid-template-columns:1fr}
   .vids{grid-template-columns:1fr 1fr}
-  .logos{grid-template-columns:repeat(2,1fr)}
+  .logos li{flex-basis:calc((100% - 24px)/3);height:84px;padding:8px}
+  .logos img{max-height:50px}
   .pillar.side{flex-direction:column}
   .pillar.side img{width:100%;height:200px}
   .c-item{grid-template-columns:1fr}
@@ -809,8 +813,42 @@ footer a{color:var(--on-dark-muted)}
   <div class="wrap">
     <h2 class="rv">Gli sponsor di Codice Iknosys</h2>
     <p class="rv">Oltre 30 aziende hanno scelto di sostenere la nostra visione.</p>
-    <div class="logos rv"><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div></div>
-    <div class="seg rv" style="margin-top:16px;text-align:left"><b>Segnaposto</b>Loghi degli sponsor 2026 in SVG o PNG trasparente, monocromatici.</div>
+    <ul class="logos rv" aria-label="Sponsor di Codice Iknosys">
+      <li><img src="assets/sponsor/centro-di-formazione-e2s-school.webp" alt="Centro di formazione E2S School" width="172" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/vigilanza-la-nuorese.webp" alt="Vigilanza La Nuorese" width="181" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/mr-ice.webp" alt="Mr. Ice" width="221" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/fud-noa.webp" alt="Fud Noa" width="211" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/mamo-pizza.webp" alt="Mamo Pizza" width="358" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/archicontract.webp" alt="Archicontract" width="440" height="61" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/cantina-mont-e-prama.webp" alt="Cantina Mont&#x27;e Prama" width="440" height="91" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/francesca-agus.webp" alt="Francesca Agus" width="396" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/buongiusto.webp" alt="Buongiusto" width="312" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/santas.webp" alt="Santas" width="269" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/s-lucia.webp" alt="S. Lucia" width="366" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/smeraldina.webp" alt="Smeraldina" width="312" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/so-chic-cool-rose.webp" alt="So Chic! Cool Rosé" width="247" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/topplayer.webp" alt="TopPlayer" width="122" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/dito-sama.webp" alt="Dito Sama" width="440" height="124" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/avv-fabrizio-melis-istituto-investigativo.webp" alt="Avv. Fabrizio Melis Istituto Investigativo" width="440" height="62" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/labware.webp" alt="Labware" width="440" height="123" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/mema-ceramicart.webp" alt="Mema Ceramicart" width="407" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/cabes-antincendio.webp" alt="Cabes Antincendio" width="440" height="153" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/agis-cad.webp" alt="Agis-Cad" width="184" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/iferrari.webp" alt="iFerrari" width="111" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/wall-street-english.webp" alt="Wall Street English" width="236" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/moka-domus.webp" alt="Moka Domus" width="131" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/nivea-eventi.webp" alt="Nivea Eventi" width="364" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/lebon.webp" alt="Lebon" width="319" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/sardexpay.webp" alt="SardexPay" width="440" height="82" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/allianz-soffietti-assicura-it.webp" alt="Allianz Soffietti Assicura.it" width="440" height="101" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/syrve.webp" alt="Syrve" width="440" height="137" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/tramas.webp" alt="Tramas" width="440" height="122" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/unoenergy.webp" alt="Unoenergy" width="440" height="67" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/vigneti-neapolis.webp" alt="Vigneti Neapolis" width="280" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/plateform.webp" alt="Plateform" width="440" height="78" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/sa-marigosa.webp" alt="Sa Marigosa" width="357" height="180" loading="lazy" decoding="async"></li>
+      <li><img src="assets/sponsor/com-key-experience.webp" alt="Com &amp; Key Experience" width="300" height="180" loading="lazy" decoding="async"></li>
+    </ul>
   </div>
 </section>
 
