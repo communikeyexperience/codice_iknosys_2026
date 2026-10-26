@@ -388,7 +388,10 @@ details[open] .tog{transform:rotate(45deg);background:var(--accent);color:#fff}
 /* griglia loghi sponsor: righe centrate, ogni logo nel suo riquadro */
 .logos{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;list-style:none;max-width:1120px;margin:0 auto}
 .logos li{flex:0 0 calc((100% - 60px)/6);height:112px;background:var(--surface);border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:14px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
-.logos li:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(11,18,38,.08)}
+/* al passaggio del mouse il logo si ingrandisce per leggerlo meglio */
+.logos li{position:relative}
+.logos li:hover{transform:scale(1.4);z-index:2;box-shadow:0 16px 40px rgba(11,18,38,.16)}
+@media (prefers-reduced-motion:reduce){.logos li{transition:none}}
 .logos img{max-width:86%;max-height:68px;width:auto;height:auto;object-fit:contain}
 
 /* centurion */
